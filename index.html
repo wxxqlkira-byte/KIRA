@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="AUTO PARTS - магазин автозапчастей">
+
+    <title>AUTO PARTS</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <a href="#home" class="logo">
+        AUTO<span>PARTS</span>
+    </a>
+
+    <nav class="navigation">
+
+        <a href="#home" data-i18n="navHome">Главная</a>
+
+        <a href="#catalog" data-i18n="navCatalog">Каталог</a>
+
+        <a href="#categories" data-i18n="navCategories">Категории</a>
+
+        <a href="#about" data-i18n="navAbout">О нас</a>
+
+        <a href="#contact" data-i18n="navContact">Контакты</a>
+
+    </nav>
+
+    <div class="header-actions">
+
+        <select id="languageSelect" class="language-select">
+
+            <option value="ru">RU</option>
+            <option value="fr">FR</option>
+            <option value="it">IT</option>
+            <option value="en">EN</option>
+            <option value="de">DE</option>
+            <option value="uk">UA</option>
+
+        </select>
+
+        <button class="cart-button" id="openCart">
+
+            🛒
+
+            <span data-i18n="cart">
+                Корзина
+            </span>
+
+            <span class="cart-count">
+                0
+            </span>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- ================= MAIN ================= -->
+
+<main>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="hero-label">
+            AUTO PARTS • QUALITY • SERVICE
+        </div>
+
+        <h1 data-i18n="heroTitle">
+            Всё для вашего автомобиля
+        </h1>
+
+        <p class="hero-description" data-i18n="heroDescription">
+            Найдите качественные автозапчасти для вашего автомобиля быстро и удобно.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a
+                href="#catalog"
+                class="button button-primary"
+                data-i18n="viewCatalog"
+            >
+                Смотреть каталог
+            </a>
+
+            <a
+                href="#categories"
+                class="button button-secondary"
+                data-i18n="viewCategories"
+            >
+                Категории
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-image">
+
+        <img
+            src="images/car.png"
+            alt="Car"
+        >
+
+    </div>
+
+</section>
+
+
+<!-- ================= SEARCH ================= -->
+
+<section class="search-section">
+
+    <div class="search-header">
+
+        <div class="section-label" data-i18n="searchLabel">
+            БЫСТРЫЙ ПОИСК
+        </div>
+
+        <h2 data-i18n="searchTitle">
+            Найдите нужную запчасть
+        </h2>
+
+    </div>
+
+
+    <div class="search-panel">
+
+        <div class="search-field">
+
+            <label data-i18n="brand">
+                Марка
+            </label>
+
+            <select id="brandSelect">
+
+                <option value="" data-i18n="chooseBrand">
+                    Выберите марку
+                </option>
+
+                <option value="bmw">BMW</option>
+                <option value="mercedes">Mercedes-Benz</option>
+                <option value="audi">Audi</option>
+                <option value="volkswagen">Volkswagen</option>
+                <option value="toyota">Toyota</option>
+
+            </select>
+
+        </div>
+
+
+        <div class="search-field">
+
+            <label data-i18n="model">
+                Модель
+            </label>
+
+            <select id="modelSelect">
+
+                <option value="" data-i18n="chooseModel">
+                    Выберите модель
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="search-field">
+
+            <label data-i18n="year">
+                Год
+            </label>
+
+            <select id="yearSelect">
+
+                <option value="" data-i18n="chooseYear">
+                    Выберите год
+                </option>
+
+                <option>2026</option>
+                <option>2025</option>
+                <option>2024</option>
+                <option>2023</option>
+                <option>2022</option>
+                <option>2021</option>
+                <option>2020</option>
+                <option>2019</option>
+                <option>2018</option>
+
+            </select>
+
+        </div>
+
+
+        <button
+            class="search-button"
+            id="searchButton"
+            data-i18n="search"
+        >
+            Найти
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CATEGORIES ================= -->
+
+<section class="categories-section" id="categories">
+
+    <div class="section-heading">
+
+        <div class="section-label" data-i18n="categoriesLabel">
+            КАТЕГОРИИ
+        </div>
+
+        <h2 data-i18n="categoriesTitle">
+            Запчасти для любого автомобиля
+        </h2>
+
+    </div>
+
+
+    <div class="category-grid">
+
+
+        <article class="category-card">
+
+            <div class="category-icon">
+                ⚙️
+            </div>
+
+            <h3 data-i18n="engine">
+                Двигатель
+            </h3>
+
+            <p data-i18n="engineDescription">
+                Детали двигателя и системы питания
+            </p>
+
+            <button
+                class="category-card-button"
+                data-category="engine"
+            >
+                →
+            </button>
+
+        </article>
+
+
+        <article class="category-card">
+
+            <div class="category-icon">
+                🛑
+            </div>
+
+            <h3 data-i18n="brakes">
+                Тормоза
+            </h3>
+
+            <p data-i18n="brakesDescription">
+                Колодки, диски и тормозные системы
+            </p>
+
+            <button
+                class="category-card-button"
+                data-category="brakes"
+            >
+                →
+            </button>
+
+        </article>
+
+
+        <article class="category-card">
+
+            <div class="category-icon">
+                🔧
+            </div>
+
+            <h3 data-i18n="suspension">
+                Подвеска
+            </h3>
+
+            <p data-i18n="suspensionDescription">
+                Амортизаторы и детали подвески
+            </p>
+
+            <button
+                class="category-card-button"
+                data-category="suspension"
+            >
+                →
+            </button>
+
+        </article>
+
+
+        <article class="category-card">
+
+            <div class="category-icon">
+                💡
+            </div>
+
+            <h3 data-i18n="electric">
+                Электрика
+            </h3>
+
+            <p data-i18n="electricDescription">
+                Освещение и электронные компоненты
+            </p>
+
+            <button
+                class="category-card-button"
+                data-category="electric"
+            >
+                →
+            </button>
+
+        </article>
+
+
+        <article class="category-card">
+
+            <div class="category-icon">
+                🛢️
+            </div>
+
+            <h3 data-i18n="filters">
+                Фильтры
+            </h3>
+
+            <p data-i18n="filtersDescription">
+                Масляные, воздушные и салонные фильтры
+            </p>
+
+            <button
+                class="category-card-button"
+                data-category="filters"
+            >
+                →
+            </button>
+
+        </article>
+
+
+        <article class="category-card">
+
+            <div class="category-icon">
+                🔋
+            </div>
+
+            <h3 data-i18n="batteries">
+                Аккумуляторы
+            </h3>
+
+            <p data-i18n="batteryDescription">
+                Аккумуляторы и системы питания
+            </p>
+
+            <button
+                class="category-card-button"
+                data-category="batteries"
+            >
+                →
+            </button>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PRODUCTS ================= -->
+
+<section class="products-section" id="catalog">
+
+    <div class="products-top">
+
+        <div class="products-title">
+
+            <div class="section-label" data-i18n="productsLabel">
+                ПОПУЛЯРНЫЕ ТОВАРЫ
+            </div>
+
+            <h2 data-i18n="productsTitle">
+                Рекомендуемые запчасти
+            </h2>
+
+            <p data-i18n="productsDescription">
+                Найдите нужную деталь для вашего автомобиля
+            </p>
+
+        </div>
+
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="productSearch"
+                placeholder="Поиск запчасти..."
+            >
+
+            <span>
+                ⌕
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="category-buttons">
+
+        <button
+            class="category-btn active"
+            data-category="all"
+        >
+            Все
+        </button>
+
+        <button
+            class="category-btn"
+            data-category="brakes"
+        >
+            Тормоза
+        </button>
+
+        <button
+            class="category-btn"
+            data-category="engine"
+        >
+            Двигатель
+        </button>
+
+        <button
+            class="category-btn"
+            data-category="filters"
+        >
+            Фильтры
+        </button>
+
+        <button
+            class="category-btn"
+            data-category="suspension"
+        >
+            Подвеска
+        </button>
+
+        <button
+            class="category-btn"
+            data-category="batteries"
+        >
+            Аккумуляторы
+        </button>
+
+    </div>
+
+
+    <div
+        class="product-grid"
+        id="productGrid"
+    >
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about-section" id="about">
+
+    <div class="about-content">
+
+        <div class="section-label" data-i18n="aboutLabel">
+            AUTO PARTS
+        </div>
+
+        <h2 data-i18n="aboutTitle">
+            Запчасти, которым можно доверять
+        </h2>
+
+        <p data-i18n="aboutDescription">
+            Мы предлагаем автозапчасти для популярных марок автомобилей и делаем поиск нужной детали максимально простым.
+        </p>
+
+
+        <div class="advantages">
+
+            <div>
+                <strong>01</strong>
+                <span data-i18n="advantage1">
+                    Большой выбор
+                </span>
+            </div>
+
+            <div>
+                <strong>02</strong>
+                <span data-i18n="advantage2">
+                    Качественные детали
+                </span>
+            </div>
+
+            <div>
+                <strong>03</strong>
+                <span data-i18n="advantage3">
+                    Быстрая доставка
+                </span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer" id="contact">
+
+    <div class="footer-logo">
+        AUTO<span>PARTS</span>
+    </div>
+
+    <div class="footer-links">
+
+        <a href="#home" data-i18n="navHome">
+            Главная
+        </a>
+
+        <a href="#catalog" data-i18n="navCatalog">
+            Каталог
+        </a>
+
+        <a href="#about" data-i18n="navAbout">
+            О нас
+        </a>
+
+        <a href="#contact" data-i18n="navContact">
+            Контакты
+        </a>
+
+    </div>
+
+    <p>
+        © 2026 AutoParts
+    </p>
+
+</footer>
+
+
+<!-- ================= CART ================= -->
+
+<div
+    class="cart-overlay"
+    id="cartOverlay"
+></div>
+
+
+<aside
+    class="cart-sidebar"
+    id="cartSidebar"
+>
+
+    <div class="cart-header">
+
+        <h2 data-i18n="cart">
+            Корзина
+        </h2>
+
+        <button
+            id="closeCart"
+            class="close-cart"
+        >
+            ×
+        </button>
+
+    </div>
+
+
+    <div
+        class="cart-items"
+        id="cartItems"
+    >
+
+        <div class="empty-cart">
+
+            <div class="empty-cart-icon">
+                🛒
+            </div>
+
+            <p data-i18n="emptyCart">
+                Ваша корзина пуста
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="cart-footer">
+
+        <div class="cart-total">
+
+            <span data-i18n="total">
+                Итого
+            </span>
+
+            <strong id="cartTotal">
+                CHF 0.00
+            </strong>
+
+        </div>
+
+
+        <button
+            class="checkout-button"
+            id="checkoutButton"
+            data-i18n="checkout"
+        >
+            Оформить заказ
+        </button>
+
+    </div>
+
+</aside>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
